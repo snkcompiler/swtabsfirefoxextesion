@@ -1,0 +1,26 @@
+{
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tabs@sankhya.com.br",
+      "strict_min_version": "42.0"
+    }
+  },
+  "manifest_version": 2,
+  "name": "SW multi-abas",
+  "version": "1.0",
+
+  "description": "Ajuda a controlar as abas no SW",
+  "background": {
+      "scripts": ["swtabs_background.js"]
+  },
+  "permissions": [
+    "http://localhost/*",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*"],
+      "js": ["swtabs.js"]
+    }
+  ]
+}
